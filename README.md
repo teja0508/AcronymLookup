@@ -1,7 +1,7 @@
 # AcronymLookup
 Chandrateja Reddy  
 
-This repo contains My project for Devopedia: We decided to create a system to identify acronym definitions from context, both because this was a problem that had not been solved before and because the system is something that we personally could use. Furthermore, the problem gave us the opportunity to get creative in our data collection. Below is an overview of our process with an emphasis on which files to run/modify in order to improve upon our work. To view our machine learning pipeline, read all code for training and testing, and view all data visualizations, please see the `.ipynb` files . To read more about the research specifics, see our paper, `Machine-Learning Approach for Cross-Domain Acronym Definition Identification.pdf`. Also check out our [Moxel](http://beta.moxel.ai/models/maya/acronyms/latest) model. 
+This repo contains My project for Devopedia: We decided to create a system to identify acronym definitions from context, both because this was a problem that had not been solved before and because the system is something that we personally could use. Furthermore, the problem gave us the opportunity to get creative in our data collection. Below is an overview of our process with an emphasis on which files to run/modify in order to improve upon our work. To view our machine learning pipeline, read all code for training and testing, and view all data visualizations, please see the `.ipynb` files . To read more about the research specifics, see our paper, `Machine-Learning Approach for Cross-Domain Acronym Definition Identification.pdf`. 
 
 ## Setting Up The Environment
 For convenience, we used a Python `virtualenv` to manage dependencies. To run our code, set up and activate a Python 2 `virtualenv`, then run `pip install -r requirements.txt`.
@@ -13,8 +13,7 @@ A large part of the contribution made in this work was in the tools to create an
 In the `data` folder, run `python generateURLSpreadsheet.py`. This will recursively list all pages on Wikipedia under the categories listed in `categories.txt`. Each category will be created as its own `{Name of Category}.csv` file in the `categories` folder. If you want to change the number of subcategories to traverse, or the number of URLs per category, you can modify those as arguments to the script. By default the script runs as if you invoked it using `python generateURLSpreadsheet.py --recursionDepth=3 --numURLs=3000`. 
 
 ### Downloaded Files Of Devopedia Articles (Acronyms , Abbrevations)
-
-
+devopediaAcronyms.v2248.json , devopediaArticles.v2248.json
 
 
 From there, you'll need to combine the files into one `data.csv` file. The rows will be automatically separated into train and test, but you'll need to shuffle the rows manually. In our case this was to ensure we put the lists of acronyms in the train set.
