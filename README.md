@@ -32,6 +32,7 @@ If you are doing your own training, you'll need to set up Postgres. Once created
 
 ## Training the Model
 To train the model, simply run `python train.py`.
+Create trained-models Folder in Root Dir....Run `py train.py` Command .Then Automatically Models Will Created and Model Will be Saved as a .pkl files in trained-models.
 
 ## Using the Model
 To test against the testing set you have created, run `python test.py`. This will automatically evaluate the accuracy of the model. However, if you are just looking to run simple queries, pass a string to the `predict()` function in `serve.py`.
