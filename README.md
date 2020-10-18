@@ -15,6 +15,8 @@ In the `data` folder, run `python generateURLSpreadsheet.py`. This will recursiv
 ### Downloaded Files Of Devopedia Articles (Acronyms , Abbrevations)
 devopediaAcronyms.v2248.json , devopediaArticles.v2248.json
 
+(https://github.com/teja0508/AcronymLookup/blob/main/label-definitions/definitions_new.csv) .This definitions_new.csv file is combined Acronym data of Wikkipedia & Devopedia Articles
+
 
 From there, you'll need to combine the files into one `data.csv` file. The rows will be automatically separated into train and test, but you'll need to shuffle the rows manually. In our case this was to ensure we put the lists of acronyms in the train set.
 
